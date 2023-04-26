@@ -44,7 +44,7 @@ def Menu():
     s = int(input("enter a number (0 or 1) : "))
     print("message for encrypt or decrypt")
     msg = str(input("msg: "))
-    print("type of key is integer")
+    print("type of key is string")
     cle = str(input("key: "))
     key = clef(cle)
     if s==0:
