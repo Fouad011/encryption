@@ -1,23 +1,25 @@
-def codage(c):
-    tab = dict(zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ", range(0, 26)))
-    return tab[c]
-def decodage(n):
-    tab = dict(zip(range(0, 26), "ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
-    return tab[n]
+def code(x):
+    if type(x) is str :
+        return ord(x)-65
+    elif type(x) is int:
+        return chr(x+65)
+
 def chiffre(M, k):
     Mn = normalise(M)
     C = ''
     for c in Mn:
-        n = (codage(c)+k)%26
-        C += decodage(n)
+        n = (code(c)+k)%26
+        C += code(n)
     return C
+
 def dechiffre(C, k):
     Cn = normalise(C)
     M = ''
     for c in Cn:
-        n = (codage(c)-k)%26
-        M += decodage(n)
+        n = (code(c)-k)%26
+        M += code(n)
     return M
+
 def normalise(m):
     m = m.upper()
     m = m.split(' ')
@@ -25,6 +27,7 @@ def normalise(m):
     for x in m:
         M += x
     return M
+
 def Menu():
     print("0\t:\tencrypt")
     print("1\t:\tdecrypt")
@@ -37,4 +40,5 @@ def Menu():
         print("encrypt message : ", chiffre(msg, key))
     elif s==1:
         print("decrypt message : ", dechiffre(msg, key))
+
 Menu()
