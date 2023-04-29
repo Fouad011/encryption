@@ -15,6 +15,7 @@ def chiffre(M, k):
         if len(k)==i:
             i = 0
     return C
+
 def dechiffre(C, k):
     Cn = normalise(C)
     M = ''
@@ -26,6 +27,7 @@ def dechiffre(C, k):
         if len(k)==i:
             i = 0
     return M
+
 def normalise(m):
     m = m.upper()
     m = m.split(' ')
@@ -33,11 +35,13 @@ def normalise(m):
     for x in m:
         M += x
     return M
+
 def clef(k):
     cles = []
     for c in k:
         cles.append(code(normalise(c)))
     return cles
+
 def Menu():
     s = -1
     while(s==-1):
@@ -58,4 +62,5 @@ def Menu():
         elif s==1:
             print("plain text message : ", dechiffre(msg, key))
             s = -1
+
 Menu()
