@@ -33,12 +33,12 @@ def Menu():
     print("1\t:\tdecrypt")
     s = int(input("enter a number (0 or 1) : "))
     print("message for encrypt or decrypt")
-    msg = str(input("msg: "))
+    msg = str(input("message: "))
     print("type of key is integer")
     key = int(input("key: "))
     if s==0:
-        print("encrypt message : ", chiffre(msg, key))
+        print("cipher text message : ", chiffre(msg, key))
     elif s==1:
-        print("decrypt message : ", dechiffre(msg, key))
+        print("plain text message : ", dechiffre(msg, key))
 
 Menu()
