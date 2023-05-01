@@ -89,8 +89,8 @@ def Menu():
     s = int(input("enter a number (0 or 1) : "))
     print("\tmessage for encrypt or decrypt")
     msg = str(input("msg: "))
-    print("\ttype of key is integer")
-    key = str(input("enter a key: "))
+    print("\ttype of key is string")
+    key = str(input("text key: "))
     if s==0:
         print("encrypt message : ", chiffre(msg, key))
     elif s==1:

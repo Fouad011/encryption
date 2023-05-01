@@ -49,7 +49,7 @@ def Menu():
     print("message for encrypt or decrypt")
     msg = str(input("msg: "))
     print("type of key is string")
-    cle = str(input("key: "))
+    cle = str(input("text key: "))
     key = clef(cle)
     if s==0:
         print("encrypt message : ", chiffre(msg, key))
